@@ -14,9 +14,9 @@
     --color-black: #000;
     --color-gray1: #3d4143;
     --color-gray2: #9c9d9d;
-    --color-white: #f6f6f6;
+    --color-white: #5f00cc;
     --color-destaque1: #e7fc00;
-    --color-destaque2: #728e6f;
+    --color-destaque2: #5f00cc;
 }
 
 /* Estilizando a barra de rolagem */
@@ -335,7 +335,7 @@ a {
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.05em;
-    color: var(--color-white);
+    color: white
 }
 
 .cta svg {
@@ -358,7 +358,7 @@ a {
 
 .cta:hover svg {
     transform: translateX(0);
-    stroke: var(--color-destaque1);
+    stroke: white
 }
 
 .cta:active {
@@ -647,6 +647,12 @@ a {
     }
 }
 
+.icone-java {
+    width: 100px; /* Defina a largura */
+    height: 100px; /* Defina a altura */
+    object-fit: cover; /* Garante que a imagem se ajuste bem */
+}
+
 /*************** SERVIÇOS *****/
 .servicos {
     background-color: var(--color-white);
@@ -795,7 +801,7 @@ a {
 }
 
 .container-free-your-mind span {
-    color: var(--color-black);
+    color: white;
     font-size: 15vw;
 }
 
