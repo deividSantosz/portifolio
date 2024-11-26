@@ -656,6 +656,107 @@ a {
 
 
 /*************** PORTFOLIO *****/
+
+/* Estilo geral do card */
+.card {
+    height: 400px;
+    width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho do card */
+.card-header {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+}
+
+.card-header a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-body-titulo {
+    align-items: center;
+    color: red;
+}
+.card-body-descricao {
+    color: red;
+}
+
+/* Mensagem do GitHub */
+.github-message {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Corpo do card */
+.card-body {
+    padding: 15px;
+}
+
+.card-body h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.tecnologias {
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.icone-projetos {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+
+    .card-header {
+        height: 150px;
+    }
+
+    .github-message {
+        font-size: 1rem;
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
 .portfolio {
     width: 100%;
     height: 100%;
@@ -716,20 +817,61 @@ a {
 .imagens-case {
     width: 100%; /* Ajusta a largura ao container */
     max-width: 400px; /* Limita a largura máxima */
-    height: auto; /* Proporcional à imagem */
+    height: 100%; /* Proporcional à imagem */
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Evita que partes da imagem escapem */
+}
+.cafe-na-porta {
+    width: 100%; /* Ajusta a largura ao container */
+    max-width: 200px; /* Limita a largura máxima */
+    height: 100%; /* Proporcional à imagem */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Evita que partes da imagem escapem */
 }
 
-
-.slide img {
-    width: 100%; /* Ocupa todo o espaço disponível */
-    height: auto; /* Mantém as proporções */
-    object-fit: cover; /* Ajusta sem distorção */
+.slide {
+    display: block;
+    position: relative;
+    overflow: hidden;
 }
 
+.slide img {
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+.github-message {
+    position: absolute;
+    margin-bottom: 80px;
+    bottom: 10px; /* Posição do texto */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 20px;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease;
+    width: 180px;
+}
+
+.slide:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.slide:hover .github-message {
+    opacity: 1; /* Torna o texto visível quando passar o mouse */
+}
 
 .slide img:first-child {
     display: block;
@@ -741,6 +883,14 @@ a {
     text-align: center; /* Centraliza os textos */
 }
 
+.tecnologias {
+    font-size: 20px;
+}
+.icone-projetos {
+    width: 30px; /* Defina a largura */
+    height: 30px; /* Defina a altura */
+    object-fit: cover; /* Garante que a imagem se ajuste bem */
+}
 .conteudo-textos-case {
     width: 100%;
     height: 100%;
