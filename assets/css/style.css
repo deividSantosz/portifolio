@@ -11,11 +11,11 @@
 :root {
     --font-grande: 'TT Hoves Pro Trial', sans-serif;
     --font-pequena: 'ClashGrotesk-Light', sans-serif;
-    --color-black: #000000;
+    --color-black: #13131F;
     --color-gray1: #3d4143;
     --color-gray2: #9c9d9d;
     --color-white: #5f00cc;
-    --color-destaque1: #e7fc00;
+    --color-destaque1: white;
     --color-destaque2: #5f00cc;
 }
 
@@ -139,18 +139,9 @@ a {
     justify-content: space-between;
     z-index: 99;
     transition: top 0.3s ease-in-out;
-    background-color: rgba(0, 0, 0, .9); 
+    background-color: rgba(0, 0, 0, 0.582); 
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
-}
-
-/* Logo */
-.logo {
-    width: 100%;
-}
-
-.logo img {
-    width: 150px;
 }
 
 /* Menu */
@@ -661,12 +652,17 @@ a {
 .card {
     height: 400px;
     width: 500px;
-    background-color: #fff;
+    background-color: #13131F;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px #5f00cc;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+.card:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 /* Cabeçalho do card */
@@ -674,7 +670,7 @@ a {
     position: relative;
     width: 100%;
     height: 200px;
-    background-color: #333;
+    background-color: #515050;
 }
 
 .card-header a {
@@ -689,13 +685,6 @@ a {
     height: 100%;
     object-fit: cover;
 }
-.card-body-titulo {
-    align-items: center;
-    color: red;
-}
-.card-body-descricao {
-    color: red;
-}
 
 /* Mensagem do GitHub */
 .github-message {
@@ -703,7 +692,7 @@ a {
     bottom: 15px;
     left: 20px;
     font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(255, 255, 255);
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -717,12 +706,13 @@ a {
 .card-body h1 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #333;
+    margin-left: 140px;
+    color:#5f00cc;
 }
 
 .card-body p {
     font-size: 1rem;
-    color: #555;
+    color: white;
     margin-bottom: 1rem;
 }
 
@@ -732,7 +722,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #333;
+    color: rgba(255, 255, 255, 0.73);
 }
 
 .icone-projetos {
@@ -783,6 +773,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 150px;
 }
 
 .headline-portfolio .titulo {
@@ -795,7 +786,7 @@ a {
     width: 100%;
     display: flex;
     flex-wrap: wrap; /* Permite quebra de linha quando necessário */
-    gap: 2rem; /* Espaço entre os elementos */
+    gap: 10rem; /* Espaço entre os elementos */
     justify-content: space-between; /* Espaçamento uniforme */
     padding: 2rem;
 }
